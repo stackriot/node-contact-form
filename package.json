@@ -1,0 +1,24 @@
+{
+    "name": "node-contact-form",
+    "version": "1.0.0",
+    "description": "A Node.js powered contact form",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stackriot/node-contact-form.git"
+    },
+    "author": "Seth Bergman",
+    "license": "ICS",
+    "bugs": {
+        "url": "https://github.com/stackriot/node-contact-form/issues"
+    },
+    "homepage": "https://github.com/stackriot/node-contact-form#readme",
+    "dependencies": {
+        "express": "^4.13.4",
+        "nodemailer": "0.7.1"
+    }
+}

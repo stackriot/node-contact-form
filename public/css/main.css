@@ -1,0 +1,134 @@
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #D16666;
+}
+
+#form {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    ;
+    background-color: #2C4251;
+    position: relative;
+    top: 20%;
+}
+
+.button-text {
+    font-weight: 900;
+}
+
+.login-text {
+    font-size: 2em !important;
+}
+
+#name-field {
+    margin-bottom: 20px;
+}
+
+#email-field {
+    margin-bottom: 20px;
+}
+
+#textarea1 {
+    font-size: 1.5em !important;
+}
+
+
+.thank-you-modal {
+    height: 30% !important;   
+}
+
+
+
+.input-field-text {
+    font-size: 1.5em !important;
+}
+
+
+/* label color */
+
+.input-field label {
+    color: white;
+    margin-top: -10px;
+}
+
+
+/* label focus color */
+
+.input-field input[type=email]:focus + label {
+    color: white;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+}
+
+
+/* label focus color */
+
+.input-field input[type=email]:focus + label {
+    color: white;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus + label {
+    color: white;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+}
+
+
+/* label focus color */
+
+.input-field textarea:focus + label {
+    color: white !important;
+}
+
+
+/* label underline focus color */
+
+.input-field textarea:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #000;
+}

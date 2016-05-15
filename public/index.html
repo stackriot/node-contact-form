@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!--Import main.css-->
+    <link type="text/css" rel="stylesheet" href="./css/main.css" />
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var user, to, subject, text;
+            $("#send_email").click(function () {
+                // enter your email account that you want to recieve emails at.
+                to = "hello@sethbergman.com";
+                name = $("#name").val();
+                user = $("#user_email").val();
+                text = $("#textarea1").val();
+                // $("#message").text("Sending E-mail...Please wait");
+                $.get("http://localhost:8080/send", {
+                    to: to,
+                    name: name,
+                    user: user,
+                    text: text
+                }, function (data) {
+                    if (data == "sent") {
+                        console.log("Email sent");
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!--Modal Trigger Script-->
+    <script>
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+    </script>
+
+
+
+    <div id="form" class="row container center
+        z-depth-5">
+
+        <form id="name-field" class="col s12">
+            <div class="row">
+                <div class="input-field col s12 white-text">
+                    <input class="input-field-text" id="name" type="text">
+                    <label for="name" class="login-text">Name</label>
+                </div>
+            </div>
+        </form>
+
+        <form id="email-field" class="col s12">
+            <div class="row">
+                <div class="input-field col s12 white-text">
+                    <input class="input-field-text" id="user_email" type="email" class="validate">
+                    <label for="email" class="login-text">Email</label>
+                </div>
+            </div>
+        </form>
+
+        <form id="message-field" class="col s12">
+            <div class="row">
+                <div class="input-field col s12 white-text">
+                    <textarea id="textarea1" class="materialize-textarea" type="text-area"></textarea>
+                    <label for="textarea1" class="login-text">Message</label>
+                </div>
+            </div>
+        </form>
+        <a id="send_email" class="waves-effect waves-light btn-large black homepage-buttons button-text center modal-trigger" href="#modal1"> Send email </a>
+
+
+        <!-- Message Sent Modal Structure -->
+        <div id="modal1" class="modal modal-fixed-footer thank-you-modal">
+            <div class="modal-content">
+                <h4>Thank you!</h4>
+                <p>Your email has been sent. I'll get back to you shortly.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
